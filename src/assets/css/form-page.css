@@ -1,0 +1,9 @@
+.form_page form{
+  max-width: 650px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 550px){
+  .form_page{
+    padding: 15px 0;
+  }
+}

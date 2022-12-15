@@ -1,0 +1,164 @@
+form.default.sl_form{
+  max-width: 350px;
+  margin: 0 auto;
+  background: var(--bgColor1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--bxShadow1);
+}
+
+form.default .form_header{
+  
+}
+form.default .form_header .title{
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  margin-top: -5px;
+  color: var(--txtColor2);
+}
+form.default .form_header p{
+  font-size: 16px;
+  font-family: var(--fontFamily1);
+  font-weight: 500;
+  color: var(--txtColor2);
+  margin-top: 5px;
+  line-height: 22px;
+}
+
+form.default .inputs{
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 15px;
+}
+form.default .input_group{
+  display: flex;
+  grid-gap: 20px;
+}
+form.default .input_group .input_container{
+  width: calc(50% - 10px);
+}
+form.default .input_container{
+  display: block;
+}
+form.default .input_container.radio{
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  justify-content: left;
+}
+form.default label{
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  color: var(--txtColor3);
+  transition: margin .2s ease;
+}
+form.default input,
+form.default select,
+form.default select option,
+form.default textarea,
+form.default .textarea{
+  display: inline_block;
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 8px;
+  padding: 0 10px;
+  background: var(--bgColor2);
+  color: var(--txtColor1);
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+form.default.bg_w input,
+form.default.bg_w select,
+form.default.bg_w select option,
+form.default.bg_w textarea,
+form.default.bg_w .textarea{
+  background: var(--bgColor1);
+}
+form.default input:focus{
+  box-shadow: 0 0 0 2px var(--brandingColor2);
+}
+form.default .input_container.radio input{
+  height: 20px;
+  width: 20px;
+}
+form.default textarea,
+form.default .textarea{
+  height: 120px;
+  resize: vertical;
+  padding: 10px;
+}
+form.default.bg_w .textarea img{
+  width: 100px;
+}
+form.default .actions{
+  margin-top: 30px;
+}
+form.default .submit_btn{
+  height: 38px;
+  border-radius: 5px;
+  background: var(--brandingColor2);
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: white;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+form.default .submit_btn.w_min{
+  width: unset;
+  padding: 0 20px;
+}
+form.default .submit_btn.f_right{
+  float: right;
+}
+form.default .submit_btn.bg_gray{
+  background: var(--bgColor3);
+  color: black;
+}
+form.default .submit_btn:hover{
+  filter: brightness(0.95);
+}
+form.default .submit_btn:active{
+  box-shadow: none;
+}
+
+form.default .sl_link{
+  margin-top: 15px;
+}
+form.default .sl_link span{
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 350;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--txtColor3);
+}
+form.default .sl_link button{
+  height: 38px;
+  border-radius: 5px;
+  background: var(--brandingColor2);
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+}
+form.default .sl_link button:hover{
+  filter: brightness(0.95);
+}
+form.default .sl_link button:active{
+  box-shadow: none;
+}

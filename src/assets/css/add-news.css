@@ -1,0 +1,5 @@
+.add_news_page form{
+  background: var(--bgColor2);
+  padding: 15px;
+  border-radius: 10px;
+}

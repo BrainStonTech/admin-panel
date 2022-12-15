@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500&display=swap');
+
+:root{
+  --brandingColor1: #00B65F;
+  --brandingColor2: #363636;
+  --bgColor1: #ffffff;
+  --bgColor2: #f5f5f5;
+  --bgColor3: #ebebeb;
+  --bgColor4: #e0e0e0;
+  --bgColor5: #dadada;
+  --bgGlass: rgba(250, 250, 250, 0.97);
+  --txtColor1: #000000;
+  --txtColor2: #353535;
+  --txtColor3: #686868;
+  --txtColor4: #a3a3a3;
+  --fontFamily1: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --brdColor1: #dfdfdf;
+  --brdColor2: #818181;
+  --bxShadow1: #ebebeb;
+  --bxShadow2: #dbdbdb;
+  --bxShadow3: #979797;
+}
+body.dark{
+  --brandingColor1: #00B65F;
+  --brandingColor2: #363636;
+  --bgColor1: #060607;
+  --bgColor2: #17171d;
+  --bgColor3: #28282c;
+  --bgColor4: #2b2b2b;
+  --bgColor5: #262626;
+  --bgGlass: rgba(0, 0, 0, 0.97);
+  --txtColor1: #ffffff;
+  --txtColor2: #f2f2f2;
+  --txtColor3: #ebebeb;
+  --txtColor4: #e0e0e0;
+  --fontFamily1: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --brdColor1: #5a5a5a;
+  --brdColor2: rgb(85, 85, 85);
+  --bxShadow1: #3f3f3f;
+  --bxShadow2: #252525;
+  --bxShadow3: #636363;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  width: 6px;
+  margin: 0 auto;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brandingColor2);
+  width: 6px;
+  margin: 0 auto;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brandingColor1);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background: var(--bgColor3);
+}
+
+.App{
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+  min-height: 100vh;
+}
+.App.nonav{
+  justify-content: center;
+  align-items: center;
+}
+
+.page_body{
+  width: calc(100% - 98px);
+  background: var(--bgColor1);
+  border-radius: 10px;
+  margin-top: 80px;
+  margin-right: 10px;
+  transition: .2s;
+}
+.App.nonav .page_body{
+  width: unset;
+  margin: 10px 10px 0;
+  width: 360px;
+  transition: none;
+}
+.page_body.expand{
+  width: calc(100% - 230px);
+}
+@media screen and (max-width: 800px){
+  .page_body{
+    width: calc(100% - 20px);
+  }
+  .page_body.expand{
+    width: calc(100% - 20px);
+  }
+}
+
+.page{
+  padding: 30px 0;
+}
+@media only screen and (max-width: 550px){
+  .page{
+    padding: 15px 0;
+  }
+}
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+@media only screen and (max-width: 550px){
+  .container{
+    padding: 0 15px;
+  }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.select_n, .select_n *, img, a, label{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+*::selection{
+  background: #5a5a5a;
+  color: #ffffff;
+}
+
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 250, 250, 0.781);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader i{
+  font-size: 50px;
+  color: var(--brandingColor2);
+  animation: loader-animate 1s infinite;
+}
+@keyframes loader-animate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+section{
+  margin-top: 50px;
+}
+section:first-child{
+  margin-top: 0;
+}
+section .section_header{
+  margin-bottom: 15px;
+}
+section .section_header .title{
+  font-size: 20px;
+  font-family: var(--fontFamily1);
+  font-weight: 800;
+  color: var(--txtColor2);
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+/* Product Cards Section */
+section.product_cards .section_content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 10px;
+}
+@media only screen and (max-width: 580px){
+  section.product_cards .section_content{
+    grid-template-columns: 1fr;
+  }
+}
+
+.tox-tinymce{
+  max-width: none !important;
+  min-width: none !important;
+  width: 100% !important;
+}
